@@ -123,5 +123,19 @@ Mock.mock('/carousel','post',function(options){
     }
 });
 
+//轮播图接口升级版
+Mock.mock('/carousel2','post',function(options){
+
+    var {count} = JSON.parse(options.body);
+
+    var arr = data.slice(0,count);
+
+    return {
+        "status":200,
+        "count": count,
+        "list":arr
+    }
+});
+
 
 
