@@ -13,7 +13,10 @@ Mock.mock('/login','post',function(options){
 
     if(username == 'admin' && password == '123456')
     {
-        return { "status":200,msg:"登陆成功!" };
+        return {
+            "status": 200,
+            msg: "登陆成功!"
+        };
     }
     else
     {
